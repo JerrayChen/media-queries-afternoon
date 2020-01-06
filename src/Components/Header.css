@@ -1,0 +1,160 @@
+header{
+    
+    /* background-color: #333333; */
+    background-image: url("https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    height: 750px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.logo{
+    color: orange;
+    margin-left: 50px;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+header ul{
+    color: white;
+}
+
+.desk-list{
+    display: flex;
+    margin-top: 35px;
+    margin-right: 50px;
+}
+
+.desk-list li{
+    margin-left: 20px;
+}
+
+.menu-btn{
+    background-color: orange;
+    color: white;
+    border: 0px none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 90px;
+    height: 40px;
+    display: none;
+    margin-top: 10px;
+}
+
+main{
+    color: white;
+}
+
+.menu-status, .menu-status-open, .menu-status-close{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-color: #333333;
+    width: 100vw;
+    text-align: left;
+}
+
+.menu-list-mobile{
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-status{
+    display: none;
+}
+
+.menu-status-open{
+    animation: openMenu .5s forwards linear;
+}
+
+.menu-status-close{
+    animation: closeMenu .5s forwards linear;
+}
+
+@keyframes openMenu {
+    0%{
+        top: -1000px;
+    }
+    100%{
+        top: 60px;
+    }
+}
+@keyframes closeMenu {
+    0%{
+        top: 60px;
+    }
+    100%{
+        top: -1000px;
+    }
+}
+
+.welcome{
+    margin-top: 250px;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.greeting{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.more-info{
+    background-color: orange;
+    color: white;
+    border: 0px none;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 250px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+@media (min-width: 1001px){
+    .menu-status, .menu-status-open, .menu-status-close{
+        display: none;
+    }
+}
+
+@media (max-width: 1000px){
+    nav{
+        width: 700px;
+        margin: auto;
+    }
+    .logo{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .desk-list{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    header{
+        height: 500px;
+    }
+    nav{
+        width: 100vw;
+    }
+    .welcome{
+        margin-top: 100px;
+        font-size: 25px;
+    }
+    .greeting{
+        font-size: 60px;
+    }
+}
