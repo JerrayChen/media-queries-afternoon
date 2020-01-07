@@ -8,12 +8,12 @@ class Header extends Component {
         }
     }
 
-    handleMenu(){
-        if(this.state.menuStatus === "menu-status-open"){
+    handleMenu() {
+        if (this.state.menuStatus === "menu-status-open") {
             this.setState({
                 menuStatus: "menu-status-close"
             });
-        }else{
+        } else {
             this.setState({
                 menuStatus: "menu-status-open"
             });
@@ -23,6 +23,13 @@ class Header extends Component {
     render() {
         return (
             <header>
+                <ul className={this.state.menuStatus}>
+                    <li className='menu-list-mobile'>SERVICES</li>
+                    <li className='menu-list-mobile'>PORTFOLIO</li>
+                    <li className='menu-list-mobile'>ABOUT</li>
+                    <li className='menu-list-mobile'>TEAM</li>
+                    <li className='menu-list-mobile'>CONTACT</li>
+                </ul>
                 <nav>
                     <div className='logo'>
                         Start Bootstrap
@@ -34,15 +41,9 @@ class Header extends Component {
                         <li className='menu-list-desktop'>TEAM</li>
                         <li className='menu-list-desktop'>CONTACT</li>
                     </ul>
-                    <button className='menu-btn' onClick={()=> {this.handleMenu()}}>Menu☰</button>
-                    <ul className={this.state.menuStatus}>
-                        <li className='menu-list-mobile'>SERVICES</li>
-                        <li className='menu-list-mobile'>PORTFOLIO</li>
-                        <li className='menu-list-mobile'>ABOUT</li>
-                        <li className='menu-list-mobile'>TEAM</li>
-                        <li className='menu-list-mobile'>CONTACT</li>
-                    </ul>
+                    <button className='menu-btn' onClick={() => { this.handleMenu() }}>Menu☰</button>
                 </nav>
+
                 <main>
                     <div className='welcome'>Welcome To Our Studio!</div>
                     <div className='greeting'>IT'S NICE TO MEET YOU</div>

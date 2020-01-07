@@ -9,9 +9,13 @@ header{
 }
 
 nav{
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    background-color: #222222;
+    height: 60px;
+    z-index: 1;
 }
 
 .logo{
@@ -19,6 +23,7 @@ nav{
     margin-left: 50px;
     font-size: 30px;
     margin-top: 30px;
+
 }
 
 header ul{
@@ -45,6 +50,7 @@ header ul{
     height: 40px;
     display: none;
     margin-top: 10px;
+
 }
 
 main{
@@ -58,6 +64,7 @@ main{
     background-color: #333333;
     width: 100vw;
     text-align: left;
+
 }
 
 .menu-list-mobile{
@@ -71,16 +78,16 @@ main{
 }
 
 .menu-status-open{
-    animation: openMenu .5s forwards linear;
+    animation: openMenu 1s forwards linear;
 }
 
 .menu-status-close{
-    animation: closeMenu .5s forwards linear;
+    animation: closeMenu 1s forwards linear;
 }
 
 @keyframes openMenu {
     0%{
-        top: -1000px;
+        top: -300px;
     }
     100%{
         top: 60px;
@@ -91,7 +98,7 @@ main{
         top: 60px;
     }
     100%{
-        top: -1000px;
+        top: -300px;
     }
 }
 
